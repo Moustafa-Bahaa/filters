@@ -44,19 +44,20 @@ var studentsArray = [
   {
     id: "7",
     name: "essam",
-    grade: "37",
+    grade: "33",
     address: "luxor",
     status: "failed",
   },
   {
     id: "8",
     name: "abdallah",
-    grade: "42",
+    grade: "30",
     address: "aswan",
     status: "failed",
   },
 ];
 
+/**showing the students table function */
 
 function showStudents(array) {
   var table = document.getElementById("students-table");
@@ -97,7 +98,7 @@ var search = document.getElementById("search-input")
 
 var sort = document.getElementById("sort")
 
-
+/**search filter function  */
 search.addEventListener("keyup" , function(){
 
     var searchValue = search.value.toLowerCase()
@@ -110,6 +111,8 @@ search.addEventListener("keyup" , function(){
     sortItem = { reversed: true }
     showStudents(newArray);
 })
+
+/**grades sorting function  */
 
 var sortItem = {  reversed: true  }
   sort.addEventListener("click" , function(){
